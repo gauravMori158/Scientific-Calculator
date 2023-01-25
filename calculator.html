@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Scientific Calculator </title>
+    <link rel="icon" href="img/favicon.ico">
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="calc">
+            <div class="flex-container" id="output">
+                <div data-prvious class="previous"> </div>
+                <div data-current class="current">0 </div>
+            </div>
+            <div class="flex-container">
+                <div id="row2" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button>DEG</button>
+                    </div>
+                    <div>
+                        <button> F-E</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div id="row2" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button>MC</button>
+                    </div>
+                    <div>
+                        <button> MR</button>
+                    </div>
+                    <div>
+                        <button>M+</button>
+                    </div>
+                    <div>
+                        <button>M-</button>
+                    </div>
+                    <div>
+                        <button>MS </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div id="row1" style="display: flex;flex-direction: row;margin-top: 5px;margin-bottom: 5px;">
+                    <div>
+                        <div><img src="https://img.icons8.com/ios-glyphs/30/null/trigonometry.png "
+                                style="height: 20px;" />
+                            <span style="font-size: small;">Trigonometry</span>
+
+                        </div>
+
+
+                    </div>
+                    <div> <img src="https://img.icons8.com/ios-glyphs/30/null/frequency-f.png" style="height: 20px;" />
+                        <span style="font-size: small;">Function</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex-container">
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button>2<sup>nd</sup></button>
+                    </div>
+                    <div>
+                        <button>&pi;</button>
+                    </div>
+                    <div>
+                        <button>e</button>
+                    </div>
+                    <div data-all-clear>
+                        <button>C</button>
+                    </div>
+                    <div>
+                        <button data-delete><i class="fas fa-backspace"></i> </button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation>x<sup>2</sup></button>
+                    </div>
+                    <div>
+                        <button data-operation>1/<sub>X</sub></button>
+                    </div>
+                    <div>
+                        <button data-operation>|x|</button>
+                    </div>
+                    <div>
+                        <button data-operation>exp</button>
+                    </div>
+                    <div>
+                        <button data-operation>mod</button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation><sup>2</sup><i class='fas fa-square-root-alt'
+                                style="font-weight: 0px;"></i></button>
+                    </div>
+                    <div>
+                        <button>(</button>
+                    </div>
+                    <div>
+                        <button>)</button>
+                    </div>
+                    <div>
+                        <button data-operation>n!</button>
+                    </div>
+                    <div>
+                        <button data-operation>÷</button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation>x<sup>y</sup></button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">7</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">8</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">9</button>
+                    </div>
+                    <div>
+                        <button data-operation>*</i></button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation>10<sup>x</sup></button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">4</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">5</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">6</button>
+                    </div>
+                    <div>
+                        <button data-operation>-</button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation>log</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">1</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">2</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal">3</button>
+                    </div>
+                    <div>
+                        <button data-operation>+</i></button>
+                    </div>
+
+                </div>
+                <div id="row1" style="display: flex;flex-direction: row;">
+                    <div>
+                        <button data-operation>ln</button>
+                    </div>
+                    <div>
+                        <button data-operation id="normal" style="font-weight:500;">+/-</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal"> 0</button>
+                    </div>
+                    <div>
+                        <button data-number id="normal"> . </button>
+                    </div>
+                    <div>
+                        <button data-equals style="background-color: lightblue;font-weight: bold;"> <i
+                                class="fas fa-equals"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

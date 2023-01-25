@@ -1,0 +1,83 @@
+<div class="main">
+         <div class="flex-container">
+
+         </div>
+         <div class="flex-container">
+
+         </div>
+         <div class="flex-container">
+
+         </div>
+         <div class="flex-container">
+
+         </div>
+         <div class="flex-container" >
+            <div id="row" style="display: flex;flex-direction: row;">
+                <div>
+                    <button >1</button>
+                </div>
+                
+            </div>
+            
+         </div>
+
+         <div class="container">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+              <div class="col-md-8">.col-md-8</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+          
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+          
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+              <div class="col-6">.col-6</div>
+              <div class="col-6">.col-6</div>
+            </div>
+          </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row   row-cols-lg-5 p-1 ">
+          <div class="col">
+            <div class="p-3 border bg-light"><button>1</button></div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div> </div>
+          <div class="row   row-cols-lg-5 p-1  ">
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Row column</div>
+          </div>
+        </div>
+      </div>
+    </div>
