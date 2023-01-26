@@ -6,7 +6,7 @@ class Calculator {
     this.clear();
   }
   clear() {
-    this.currentOperand = 0;
+    this.currentOperand = " ";
     this.previousOperand = " ";
     this.operation = undefined;
   }
@@ -170,7 +170,7 @@ class Calculator {
     }
   }
   updateDisplay() {
-    const func =[ 'sin','cos','tan','sec','cot','csc'];
+    const func =[ 'sin','cos','tan','sec','cot','csc','log','ln'];
     this.dataCurrentText.innerText = this.getDisplayNumber(this.currentOperand);
     if (this.operation != null) {
         if ( func.includes(this.operation)){
