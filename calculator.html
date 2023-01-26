@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Scientific Calculator </title>
     <link rel="icon" href="img/favicon.ico">
-    
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -67,16 +67,45 @@
             </div>
             <div class="flex-container">
                 <div id="row1" style="display: flex;flex-direction: row;margin-top: 5px;margin-bottom: 5px;">
-                    <div>
-                        <div><img src="https://img.icons8.com/ios-glyphs/30/null/trigonometry.png "
+                    <div >
+                        <div onclick="displayTrigonometry()"><img src="https://img.icons8.com/ios-glyphs/30/null/trigonometry.png " alt="icon"
                                 style="height: 20px;" />
-                            <span style="font-size: small;">Trigonometry</span>
+                            <span style="font-size: small;">Trigonometry <i class='fas fa-angle-down'></i></span>
 
                         </div>
+                        <div id="rowBlock" style="flex-direction:column;" >
 
+                            <div style=" display:flex;flex-direction: row;gap: 2px;">
+
+                                <div>
+                                    <button data-operation onclick="displayNone()">sin</button>
+                                </div>
+                                <div>
+                                    <button data-operation onclick="displayNone()">cos</button>
+                                </div>
+                                <div>
+                                    <button data-operation onclick="displayNone()">tan</button>
+                                </div>
+
+                            </div>
+                            <div style=" display:flex; flex-direction: row;gap: 2px;">
+
+                                <div>
+                                    <button data-operation onclick="displayNone()">csc</button>
+                                </div>
+                                <div>
+                                    <button data-operation onclick="displayNone()">sec</button>
+                                </div>
+                                <div>
+                                    <button data-operation onclick="displayNone()">cot</button>
+                                </div>
+
+                            </div>
+                        </div>
 
                     </div>
-                    <div> <img src="https://img.icons8.com/ios-glyphs/30/null/frequency-f.png" style="height: 20px;" />
+                    <div> <img src="https://img.icons8.com/ios-glyphs/30/null/frequency-f.png" style="height: 20px; "
+                            alt="icon" />
                         <span style="font-size: small;">Function</span>
                     </div>
                 </div>
@@ -89,10 +118,10 @@
                         <button>2<sup>nd</sup></button>
                     </div>
                     <div>
-                        <button>&pi;</button>
+                        <button data-number-pi>&pi;</button>
                     </div>
                     <div>
-                        <button>e</button>
+                        <button data-number-e>e</button>
                     </div>
                     <div data-all-clear>
                         <button>C</button>
@@ -110,7 +139,7 @@
                         <button data-operation>1/<sub>X</sub></button>
                     </div>
                     <div>
-                        <button data-operation>|x|</button>
+                        <button data-operation title="absolute">|x|</button>
                     </div>
                     <div>
                         <button data-operation>exp</button>
@@ -126,10 +155,10 @@
                                 style="font-weight: 0px;"></i></button>
                     </div>
                     <div>
-                        <button>(</button>
+                        <button data-operation >(</button>
                     </div>
                     <div>
-                        <button>)</button>
+                        <button data-operation >)</button>
                     </div>
                     <div>
                         <button data-operation>n!</button>
@@ -177,7 +206,7 @@
                 </div>
                 <div id="row1" style="display: flex;flex-direction: row;">
                     <div>
-                        <button data-operation >log</button>
+                        <button data-operation>log</button>
                     </div>
                     <div>
                         <button data-number id="normal">1</button>
