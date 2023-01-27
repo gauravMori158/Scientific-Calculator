@@ -372,6 +372,13 @@ class Calculator {
     console.log(num)
     this.dataCurrentText.innerText = `${num}.e +${len-2}`;
   }
+  deg()
+  {
+    let num =parseFloat((this.currentOperand/Math.PI)*180).toFixed(2);
+    this.dataCurrentText.innerText = `${num}`;
+     
+     
+  }
 }
 
 const numberButton = document.querySelectorAll("[data-number]");
@@ -391,7 +398,8 @@ const operationButtonMm = document.querySelector("[data-operation-Mm]");
 const operationButtonMs = document.querySelector("[data-operation-Ms]");
 const parenthesis = document.querySelectorAll("[data-operation-par]");
 
- 
+
+const operationButtonDeg = document.querySelector("[data-operation-deg]");
 const operationButtonFe = document.querySelector("[data-operation-fe]");
 const calculator = new Calculator(dataPreviousText, dataCurrentText);
 
@@ -453,6 +461,11 @@ operationButtonFe.addEventListener("click", (button) => {
    
 });
 
+
+operationButtonDeg.addEventListener("click", (button) => {
+  calculator.deg( );
+   
+});
 operationButtonMm.addEventListener("click", (button) => {
   calculator.minusMemory( );
    
