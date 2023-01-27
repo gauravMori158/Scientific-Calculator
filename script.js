@@ -5,6 +5,8 @@ class Calculator {
     this.dataPreviousText = dataPreviousText;
     this.memory = [];
     this.clear();
+    document.getElementById('mc').style= ' color :   rgb(176, 176, 176);';
+    document.getElementById('mr').style= ' color :   rgb(176, 176, 176);';
   }
   clear() {
     this.currentOperand = " ";
@@ -241,6 +243,7 @@ class Calculator {
     this.previousOperand = "";
     this.operation = undefined;
   }
+
   getDisplayNumber(number) {
     const stringNumber = number.toString();
     const integerDigit = parseFloat(stringNumber.split(".")[0]);
@@ -317,12 +320,27 @@ class Calculator {
      return;
     this.memory.push(parseFloat( this.currentOperand));
      console.log(this.memory);
+     let ind =this.memory.length;
+     if(ind>0){
+      
+    document.getElementById('mc').style= ' color : black   ';
+    document.getElementById('mr').style= ' color :  black  ';
+     }
   }
   addmemory()
   {
     let ind =this.memory.length;
-    if(ind>0)
+    if(this.currentOperand != " " && ind ==0)
+    {
+      this.memory.push(parseFloat( this.currentOperand));
+       
+    }ind =this.memory.length;
+    if(ind>0){
     this.memory[ind-1] +=parseFloat( this.currentOperand);  console.log(this.memory);
+
+    document.getElementById('mc').style= ' color : black   ';
+    document.getElementById('mr').style= ' color :  black  ';
+    }
   }
   minusMemory()
   {  
@@ -331,15 +349,28 @@ class Calculator {
     this.memory[ind-1] -=parseFloat( this.currentOperand);  console.log(this.memory);
   }
   clearMemory(){
+    
     this.memory =[];
     console.log(this.memory);
     this.currentOperand =parseFloat(0);
     this.dataCurrentText.innerText =0;
+    document.getElementById('mc').style= 'color :   rgb(176, 176, 176);  ';
+    document.getElementById('mr').style= ' color :   rgb(176, 176, 176); ';
   }
   recallMemory()
+  
   { let ind =this.memory.length;
+    if(ind !=0){
     this.currentOperand =parseFloat(this.memory[ind-1]);
     this.dataCurrentText.innerText =this.memory[ind-1];
+    }
+  }
+  fe()
+  {
+    let len =this.currentOperand.length;
+    let num =parseFloat(this.currentOperand/Math.pow(10,len-2)).toFixed(len-2);
+    console.log(num)
+    this.dataCurrentText.innerText = `${num}.e +${len-2}`;
   }
 }
 
@@ -359,9 +390,9 @@ const operationButtonMp = document.querySelector("[data-operation-Mp]");
 const operationButtonMm = document.querySelector("[data-operation-Mm]");
 const operationButtonMs = document.querySelector("[data-operation-Ms]");
 const parenthesis = document.querySelectorAll("[data-operation-par]");
+
  
- 
- 
+const operationButtonFe = document.querySelector("[data-operation-fe]");
 const calculator = new Calculator(dataPreviousText, dataCurrentText);
 
 numberButton.forEach((button) => {
@@ -415,6 +446,10 @@ operationButtonMp.addEventListener("click", (button) => {
 });
 operationButtonMr.addEventListener("click", (button) => {
   calculator.recallMemory( );
+   
+});
+operationButtonFe.addEventListener("click", (button) => {
+  calculator.fe( );
    
 });
 
