@@ -5,7 +5,9 @@ body{
 #rowBlock{
    margin-top: 2px; box-sizing: border-box; gap: 2px;
    display: none;
+    
 }
+ 
 .calc{
     display: box;
      
@@ -71,3 +73,23 @@ font-weight: 500;}
      
     
  }
+ #drp:hover{
+   background-color: transparent;
+   border: none;
+ }
+  #drp{
+   background-color: transparent;
+  }
+  .dropdown-menu{
+   background-color:  gray;
+   align-items: center;
+    padding: 2px
+  }
+ 
+  ol, ul {
+   
+   padding-left: 3px;
+   padding-right: 3px;
+   padding-bottom: 2px;
+}
+ 
