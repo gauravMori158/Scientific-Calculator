@@ -30,6 +30,7 @@ class Calculator {
     if (number === "." && this.currentOperand.includes(".")) return;
     this.currentOperand = this.currentOperand.toString() + number.toString();
     
+    
   }
   appendParenthesis(number){
     this.par = this.par.toString() + number.toString();
@@ -114,7 +115,7 @@ class Calculator {
         computation = prev * current;
         break;
         case "e^":
-        computation = Math.pow(2.7182818284,current);
+        computation = Math.pow(2.71 ,current);
         break;
       case "÷":
         computation = prev / current;
@@ -236,7 +237,7 @@ class Calculator {
       default:
         return;
     }
-    this.currentOperand = computation;
+    this.currentOperand = computation.toFixed(2);
     this.previousOperand = "";
     this.operation = undefined;
   }
@@ -379,14 +380,14 @@ parenthesis.forEach((button) => {
 
 numberButtonPi.forEach((button) => {
   button.addEventListener("click", () => {
-    calculator.appendNumber(22/7);
+    calculator.appendNumber(3.14);
     calculator.updateDisplay();
   });
 });
 
 numberButtonE.forEach((button) => {
   button.addEventListener("click", () => {
-    calculator.appendNumber(2.7182818284);
+    calculator.appendNumber(2.71 );
     calculator.updateDisplay();
   });
 });
