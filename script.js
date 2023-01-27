@@ -166,7 +166,7 @@ class Calculator {
   
           break;
       case "1/":
-        computation = 1 / current;
+        computation = 1 / prev;
 
         break;
       case "!":
@@ -265,7 +265,7 @@ class Calculator {
   }
   updateDisplay() {
     const func1 =[ 'sin','cos','tan','sec','cot','csc','log','ln','→dms','←deg'];
-    const func2 =['abs' ,'negate','floor','ceil','sqr','cube'];
+    const func2 =['abs' ,'negate','floor','ceil','sqr','cube','1/'];
      
    
     this.dataCurrentText.innerText = this.getDisplayNumber(this.currentOperand);
