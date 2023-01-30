@@ -145,7 +145,7 @@ class Calculator {
         if((computation == 1) || prev<0)
         prev = -prev;
         var r = Math.pow(prev, 1 / current);
-        current = Math.pow(r, current);
+        computation = Math.pow(r, current);
       
         if(Math.abs(prev - current) < 1 && (prev > 0 === current > 0))
           return computation ? -r : r; 
