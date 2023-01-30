@@ -61,7 +61,7 @@ class Calculator {
   this.operation = "e^";
 }
    else if (operation == "y") {
-    this.operation = ".√";
+    this.operation = "yroot";
   }
    else if (operation == "3") {
       this.operation = "3√";
@@ -140,12 +140,8 @@ class Calculator {
       case "^":
         computation = Math.pow(prev, current);
         break;
-        case ".√":
-          computation = current % 2;
-        if((computation == 1) || prev<0)
-        prev = -prev;
-        var r = Math.pow(prev, 1 / current);
-        computation = Math.pow(r, current);
+        case "yroot":
+          computation = Math.pow(prev,1/current);
       
         if(Math.abs(prev - current) < 1 && (prev > 0 === current > 0))
           return computation ? -r : r; 
