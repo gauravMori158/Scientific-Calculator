@@ -379,7 +379,8 @@ class Calculator {
   {
     console.log(this.currentOperand);
     this.previousOperand =this.currentOperand;
-    this.currentOperand=0;
+    
+      this.currentOperand= '';
   }
 }
 
