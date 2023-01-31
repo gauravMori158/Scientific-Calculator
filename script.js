@@ -375,6 +375,12 @@ class Calculator {
      
      
   }
+  displayPrev()
+  {
+    console.log(this.currentOperand);
+    this.previousOperand =this.currentOperand;
+    this.currentOperand=0;
+  }
 }
 
 const numberButton = document.querySelectorAll("[data-number]");
@@ -437,6 +443,7 @@ equalsButton.addEventListener("click", (button) => {
   calculator.compute();
   calculator.updateDisplay();
   calculator.clearPrev();
+  calculator.displayPrev();
 
    
 });
